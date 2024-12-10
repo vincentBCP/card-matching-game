@@ -4,8 +4,12 @@ import useGameStore, { ICard } from "../../../store/game";
 
 const CardCmp = ({
   back,
-  children,
-}: Readonly<{ back?: boolean; children?: React.ReactNode }>) => {
+  imgUrl,
+}: Readonly<{
+  back?: boolean;
+  imgUrl?: string;
+  children?: React.ReactNode;
+}>) => {
   return (
     <div
       className={clsx(
@@ -16,9 +20,15 @@ const CardCmp = ({
             back,
         }
       )}
-    >
-      {children}
-    </div>
+      style={{
+        boxShadow: "0 0 3px 1px rgba(255,255,255,0.3)",
+        backgroundSize: "100% 100%",
+        backgroundRepeat: "no-repeat",
+        backgroundImage: back
+          ? `url('${imgUrl}')`
+          : "url('./assets/images/card-background.jpeg')",
+      }}
+    />
   );
 };
 
@@ -55,11 +65,7 @@ const Card = (card: Readonly<ICard>) => {
         )}
       >
         <CardCmp />
-        <CardCmp back>
-          <span className="text-5xl font-bold text-black uppercase select-none">
-            {card.content}
-          </span>
-        </CardCmp>
+        <CardCmp back imgUrl={card.content} />
       </div>
     </div>
   );

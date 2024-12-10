@@ -22,9 +22,11 @@ const generateCards = () => {
   };
 
   for (let i = 1; i <= cardsCount; i++) {
+    const c = i > cardsCount / 2 ? i - cardsCount / 2 : i;
+
     cards.push({
       id: Randomstring.generate(),
-      content: i > cardsCount / 2 ? i - cardsCount / 2 : i,
+      content: `./assets/images/${c}.jpeg`,
       location: getLocation(),
     });
   }
