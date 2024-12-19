@@ -5,6 +5,7 @@ import useGameStore, { ICard } from "../../../store/game";
 const CardCmp = ({
   back,
   imgUrl,
+  children,
 }: Readonly<{
   back?: boolean;
   imgUrl?: string;
@@ -22,13 +23,15 @@ const CardCmp = ({
       )}
       style={{
         boxShadow: "0 0 3px 1px rgba(255,255,255,0.3)",
-        backgroundSize: "100% 100%",
-        backgroundRepeat: "no-repeat",
-        backgroundImage: back
-          ? `url('${imgUrl}')`
-          : "url('./assets/images/card-background.jpeg')",
+        // backgroundSize: "100% 100%",
+        // backgroundRepeat: "no-repeat",
+        // backgroundImage: back
+        //   ? `url('${imgUrl}')`
+        //   : "url('./assets/images/card-background.jpeg')",
       }}
-    />
+    >
+      {children}
+    </div>
   );
 };
 
@@ -65,7 +68,9 @@ const Card = (card: Readonly<ICard>) => {
         )}
       >
         <CardCmp />
-        <CardCmp back imgUrl={card.content} />
+        <CardCmp back imgUrl={card.content}>
+          <span className="text-5xl font-bold">{card.content}</span>
+        </CardCmp>
       </div>
     </div>
   );

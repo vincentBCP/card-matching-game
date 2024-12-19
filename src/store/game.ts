@@ -26,7 +26,8 @@ const generateCards = () => {
 
     cards.push({
       id: Randomstring.generate(),
-      content: `./assets/images/${c}.jpeg`,
+      // content: `./assets/images/${c}.jpeg`,
+      content: c,
       location: getLocation(),
     });
   }
