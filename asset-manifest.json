@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/vincentBCP/card-matching-game/static/css/main.448d7024.css",
+    "main.js": "/vincentBCP/card-matching-game/static/js/main.d3759e1c.js",
+    "static/js/453.13d2508a.chunk.js": "/vincentBCP/card-matching-game/static/js/453.13d2508a.chunk.js",
+    "index.html": "/vincentBCP/card-matching-game/index.html",
+    "main.448d7024.css.map": "/vincentBCP/card-matching-game/static/css/main.448d7024.css.map",
+    "main.d3759e1c.js.map": "/vincentBCP/card-matching-game/static/js/main.d3759e1c.js.map",
+    "453.13d2508a.chunk.js.map": "/vincentBCP/card-matching-game/static/js/453.13d2508a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.448d7024.css",
+    "static/js/main.d3759e1c.js"
+  ]
+}
